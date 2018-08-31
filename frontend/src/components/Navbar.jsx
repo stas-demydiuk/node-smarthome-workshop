@@ -14,7 +14,6 @@ export default function () {
                 <div className="navbar-nav">
                     <a className="nav-item nav-link" href="#/devices">Devices</a>
                     <a className="nav-item nav-link" href="#/groups">Groups</a>
-                    <a className="nav-item nav-link" href="#/timers">Timers</a>
                 </div>
             </div>
         </nav>

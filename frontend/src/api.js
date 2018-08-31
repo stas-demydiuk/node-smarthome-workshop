@@ -63,3 +63,15 @@ export async function switchOff(deviceId) {
         state: 'off'
     });
 }
+
+export async function getDeviceLog(deviceId) {
+    return [
+        {
+            date: '2018-31-08 16:00:00',
+            action: 'On'
+        },
+        {
+            date: '2018-31-08 17:00:00',
+            action: 'Off'
+        }]
+}
