@@ -50,9 +50,9 @@ export default class DeviceLog extends PureComponent {
                             <tbody>
                             {log.map((item, index) => (
                                 <tr key={index}>
-                                    <td>{ index + 1 }</td>
-                                    <td>{ item.date }</td>
-                                    <td>{ item.action }</td>
+                                    <th scope="row">{index + 1}</th>
+                                    <td>{item.date}</td>
+                                    <td>{item.action}</td>
                                 </tr>
                             ))}
                             </tbody>

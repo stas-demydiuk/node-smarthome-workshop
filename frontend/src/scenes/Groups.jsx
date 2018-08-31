@@ -1,4 +1,5 @@
 import React from 'react';
+import GroupItem from '../components/GroupItem';
 
 export default function() {
     return (
@@ -27,29 +28,11 @@ export default function() {
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Address</th>
                             <th scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                            <GroupItem group={ {id: 1, name: 'Group 1'} } index={1} />
                         </tbody>
                     </table>
                 </div>
