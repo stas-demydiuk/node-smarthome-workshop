@@ -7,7 +7,7 @@ export default function() {
                 <div className="col">
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb">
-                            <li className="breadcrumb-item"><a href="#">Home</a></li>
+                            <li className="breadcrumb-item"><a href="/#">Home</a></li>
                             <li className="breadcrumb-item active" aria-current="page">Groups</li>
                         </ol>
                     </nav>
@@ -16,7 +16,7 @@ export default function() {
 
             <div className="row mt-2">
                 <div className="col-3 offset-9">
-                    <a href="#" className="btn btn-primary float-right">Add group</a>
+                    <a href="#/groups/add" className="btn btn-primary float-right">Add group</a>
                 </div>
             </div>
 

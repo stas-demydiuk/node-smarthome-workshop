@@ -11,14 +11,14 @@ export default class DeviceEdit extends PureComponent {
         const { id } = this.props.match.params;
 
         this.setState({
-            device: await getDeviceById(parseInt(id))
+            device: await getDeviceById(parseInt(id, 10))
         });
     };
 
     handleFormSubmit = async (device) => {
         const { id } = this.props.match.params;
 
-        await updateDevice(parseInt(id), device);
+        await updateDevice(parseInt(id, 10), device);
         window.history.back();
     };
 
@@ -35,7 +35,7 @@ export default class DeviceEdit extends PureComponent {
                     <div className="col">
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb">
-                                <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                <li className="breadcrumb-item"><a href="#/">Home</a></li>
                                 <li className="breadcrumb-item"><a href="#/devices">Devices</a></li>
                                 <li className="breadcrumb-item active" aria-current="page">Edit device</li>
                             </ol>

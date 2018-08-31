@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { devicePropType } from '../constants';
 
 export default class DeviceForm extends PureComponent {
     handleCancelClick = () => {
@@ -11,14 +12,14 @@ export default class DeviceForm extends PureComponent {
             ...this.props.device,
             name: event.target.deviceName.value,
             address: event.target.deviceAddress.value,
-            port: parseInt(event.target.devicePort.value)
+            port: parseInt(event.target.devicePort.value, 10)
         });
 
         event.preventDefault();
     };
 
     render() {
-        const { device } = this.props;
+        const {device} = this.props;
 
         return (
             <form onSubmit={this.handleSubmit}>
@@ -30,7 +31,7 @@ export default class DeviceForm extends PureComponent {
                            name="deviceName"
                            placeholder="Device Name"
                            required
-                           defaultValue={device.name} />
+                           defaultValue={device.name}/>
                 </div>
 
                 <div className="form-group">
@@ -41,7 +42,7 @@ export default class DeviceForm extends PureComponent {
                            name="deviceAddress"
                            placeholder="IP Address"
                            required
-                           defaultValue={device.address} />
+                           defaultValue={device.address}/>
                 </div>
 
                 <div className="form-group">
@@ -52,7 +53,7 @@ export default class DeviceForm extends PureComponent {
                            name="devicePort"
                            placeholder="Port"
                            required
-                           defaultValue={device.port} />
+                           defaultValue={device.port}/>
                 </div>
 
                 <div className="float-right">
@@ -73,10 +74,6 @@ DeviceForm.defaultProps = {
 };
 
 DeviceForm.propTypes = {
-    device: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        address: PropTypes.string.isRequired,
-        port: PropTypes.number.isRequired
-    }),
+    device: devicePropType,
     onSubmit: PropTypes.func.isRequired
 };

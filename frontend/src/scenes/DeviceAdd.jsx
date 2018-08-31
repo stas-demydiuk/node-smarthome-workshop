@@ -15,7 +15,7 @@ export default class DeviceAdd extends PureComponent {
                     <div className="col">
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb">
-                                <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                <li className="breadcrumb-item"><a href="#/">Home</a></li>
                                 <li className="breadcrumb-item"><a href="#/devices">Devices</a></li>
                                 <li className="breadcrumb-item active" aria-current="page">Add device</li>
                             </ol>
