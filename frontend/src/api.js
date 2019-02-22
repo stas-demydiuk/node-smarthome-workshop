@@ -1,14 +1,14 @@
 let index = 3;
 let devices = {
-    1: {
-        id: 1,
+    device1: {
+        id: 'device1',
         name: 'Device #1',
         address: '192.168.1.50',
         port: 90,
         state: 'on'
     },
-    2: {
-        id: 2,
+    device2: {
+        id: 'device2',
         name: 'Device #2',
         address: '192.168.1.60',
         port: 80,
